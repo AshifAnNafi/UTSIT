@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halo</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+        #animate {
+          position: absolute;
+        }
+      </style>
+
+<script>
+  function bagi() {
+    var angka1 = parseInt(document.getElementById("angka1").value);
+    var angka2 = parseInt(document.getElementById("angka2").value);
+    var hasil = angka1 / angka2;
+    document.getElementById("hasil").innerHTML = "Hasil: "+hasil;
+  }
+  function kali() {
+    var angka1 = parseInt(document.getElementById("angka1").value);
+    var angka2 = parseInt(document.getElementById("angka2").value);
+    var hasil = angka1 * angka2;
+    document.getElementById("hasil").innerHTML = "Hasil: " + hasil;
+  }
+  function tambah() {
+    var angka1 = parseInt(document.getElementById("angka1").value);
+    var angka2 = parseInt(document.getElementById("angka2").value);
+    var hasil = angka1 + angka2;
+    document.getElementById("hasil").innerHTML = "Hasil: " + hasil;
+  }
+  function kurang() {
+    var angka1 = parseInt(document.getElementById("angka1").value);
+    var angka2 = parseInt(document.getElementById("angka2").value);
+    var hasil = angka1 - angka2;
+    document.getElementById("hasil").innerHTML = "Hasil: " + hasil;
+  }
+</script>
+
+  </head>
+  <h1>Haloo</h1>
+    <!-- <button onclick="opasity()">button</button> -->
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Klik 
+</button>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">INFO!!!!!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Selamat Anda Beruntung
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="coba.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="hd2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="FotoProfil.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Collapse -->
+<p style="margin: 50px;">
+  <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Details
+  </a>
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Hidden
+  </button>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body" style="background-color: aqua;">
+    Halooooo
+  </div>
+</div>
+
+
+<div class="container">
+  <h2>Kalkulator </h2>
+  <div class="form-group">
+    <label for="angka1">Angka 1:</label>
+    <input type="number" class="form-control" id="angka1">
+  </div>
+ 
+  <div class="form-group">
+    <label for="angka2">Angka 2:</label>
+    <input type="number" class="form-control" id="angka2">
+  </div>
+  <div class="form-group">
+    <button class="btn-success" onclick="tambah()">+</button>
+    <button class="btn-success" onclick="kurang()">-</button>
+    <button class="btn-success" onclick="kali()">*</button>
+    <button class="btn-success" onclick="bagi()">/</button>
+    </div>
+    <h3 id="hasil">Hasil:</h3>
+
+  
+
+
+    <!-- javascript animasi
+      <div id="animate">
+      <img id="image" src="coba.jpg" alt="" />
+    </div>
+    <script>
+      function moving() {
+        var elem = document.getElementById("animate");
+        var pos = 0;
+        var id = setInterval(frame, 5);
+        function frame() {
+          if (pos == 350) {
+            clearInterval(id);
+          } else {
+            pos++;
+            elem.style.top = pos + "px";
+          }
+        }
+      }
+
+      function opasity(){
+        var elem = document.getElementById("image");
+        elem.style.opacity = 0.5;
+      }
+    </script> -->
+  </body>
+</html>
